@@ -1,11 +1,8 @@
 
 describe("Tests", function () {
 
-    it("Sign in", () => {//log-in
-        cy.visit('https://raelto.github.io/auctionRM/view/login.html')
-    })
-
     it("Sign up", () => {
+        cy.visit('https://raelto.github.io/auctionRM/view/login.html')
         cy.get('a').contains('Sign Up').should('be.visible').click()
         cy.wait(500);
         cy.get('input[placeholder="Your Username Here"]').type('rael')
